@@ -19,8 +19,9 @@
     align-items: center;
 }
 
-.nav img{
+.header img{
     width: 150px;
+    padding: 10px 15px;
 }
 
 .nav-links{
