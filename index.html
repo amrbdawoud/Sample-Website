@@ -18,12 +18,17 @@
           ><img src="images/alogo.jpg" alt="company logo"
         /></a>
         <div class="nav-links">
-          <ul>
+          <ul class="nav-list" id="navi-list">
             <li><a href="">Home</a></li>
             <li><a href="#About">About</a></li>
             <li><a href="">Blog</a></li>
             <li><a href="#footer">Contact</a></li>
           </ul>
+          <div class="menu" id="toggle-button">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+          </div>
         </div>
       </nav>
 
@@ -31,7 +36,8 @@
         <h1>World's Best Website</h1>
         <p>This website is made using html, <br />css and javascript.</p>
         <a href="mailto:youremail@domain.com" class="hero-btn"
-          >Email us to know more.</a>
+          >Email us to know more.</a
+        >
       </div>
     </section>
     <section class="content">
@@ -72,17 +78,34 @@
           male is called a drake and the female is called a duck, or in
           ornithology a hen.[3][4]
         </p>
-        
       </div>
     </section>
     <section class="footer" id="footer">
       <div class="footer-info">
         <ul>
           <li><a href="mailto:youremail@domain.com">Contact us</a></li>
-          <li><a href="https://developer.moneris.com/More/Compliance/Sample%20Privacy%20Policy#:~:text=We%20are%20committed%20to%20maintaining,and%20disclosure%20of%20Personal%20Information.">Privacy policy</a></li>
-          <li><a href="https://developer.moneris.com/More/Compliance/Sample%20Terms%20of%20Use">Terms of service</a></li>
+          <li>
+            <a
+              href="https://developer.moneris.com/More/Compliance/Sample%20Privacy%20Policy#:~:text=We%20are%20committed%20to%20maintaining,and%20disclosure%20of%20Personal%20Information."
+              >Privacy policy</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.moneris.com/More/Compliance/Sample%20Terms%20of%20Use"
+              >Terms of service</a
+            >
+          </li>
         </ul>
       </div>
     </section>
   </body>
+  <script>
+    const toggleButton = document.getElementById("toggle-button");
+    const navilist = document.getElementById("navi-list");
+
+    toggleButton.addEventListener("click", () => {
+      navilist.classList.toggle("active");
+    });
+  </script>
 </html>

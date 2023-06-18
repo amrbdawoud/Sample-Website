@@ -25,10 +25,18 @@ nav{
 
 .logo img{
     height: auto;
-    max-height: 40px;
+    max-height: 50px;
     width: auto;
-    max-width: 40px;
-    /* margin: 0; */
+    max-width: 50px;
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+
+.logo img:hover{
+    transform: scale(1.5);
+    translate: 10px 10px;
+    transition: 0.1s;
 }
 .nav-links{
     display: flex;
@@ -39,18 +47,18 @@ nav{
 .nav-links ul{
     display: flex;
 }
-
 .nav-links ul li{
     list-style: none;
     display: inline-block;
-    padding: 1px 12px;
-    position: relative;
+    padding: 1px 21px;
+    position: rela1tive;
+    
 }
 
 .nav-links ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .nav-links ul li::after{
@@ -65,6 +73,64 @@ nav{
 .nav-links ul li:hover::after{
     width: 100%;
     transition: 0.5s;
+}
+
+.menu{
+    display: block;
+    margin: 0px 20px;
+}
+.menu-line{
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin: 5px;
+}
+
+@media all and (max-width: 480px) {
+    .menu {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    nav {
+        height: 222px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .activeheight {
+        height: 222px;  
+    }
+
+    .logo img{
+        position: absolute;
+        left: 1px;
+        top: 1px;
+    }
+
+    nav{
+        flex-direction: column;
+    }
+
+    .nav-links{
+        display: block;
+        width: 100%;
+    }
+
+    .nav-links ul{
+        display: none;
+        position: relative;
+        width: 100%;
+        top: 70px;
+    }
+    
+    .nav-links ul li{
+        display: block;
+        border-top: 1px solid #fff;
+    }
 }
 
 .header .text-box{
